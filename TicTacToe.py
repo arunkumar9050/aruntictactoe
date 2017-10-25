@@ -1,7 +1,9 @@
 from __future__ import print_function
 import os
+
 def clear():
     os.system('cls')
+    
 def display_board(board):
     clear()
     print('   |   |')
@@ -19,6 +21,7 @@ def display_board(board):
 
 def player_input():
     marker= ''
+    
     while not (marker=='X' or marker=='O'):
         marker=raw_input('Player 1: Do you want to be X or O: ').upper()
 
@@ -65,11 +68,12 @@ def player_choice(board):
     while position not in '1 2 3 4 5 6 7 8 9'.split() or not space_check(board,int(position)):
         position = raw_input('Choose your next position: (1-9) ')
     return int(position)
+
 def replay():
     return raw_input('Do you wanna play again?').lower().startswith('y')
 
 
-print ('Welcome to the Tic Tac Toe game!')
+print ('Welcome to the Tic Tac Toe game!....')
 
 while True:
     
